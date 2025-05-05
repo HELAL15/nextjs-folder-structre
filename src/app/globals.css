@@ -1,0 +1,6 @@
+@import 'tailwindcss';
+@custom-variant dark (&:is(.dark *));
+@utility container {
+    padding-inline: 10px;
+    margin-inline: auto;
+}
