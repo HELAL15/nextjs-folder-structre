@@ -6,6 +6,7 @@ import { useTranslations } from 'next-intl';
 
 const HomePage: FC = () => {
     const t = useTranslations();
+
     return (
         <>
             <NavigationBar />
