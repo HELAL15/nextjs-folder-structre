@@ -18,7 +18,7 @@ const Layout = async ({ children }: Readonly<{ children: ReactNode }>) => {
 
     return (
         <html suppressHydrationWarning lang={locale} dir={dir}>
-            <body className={`bg-background text-foreground antialiased`}>
+            <body className={`bg-background text-foreground overflow-x-clip antialiased`}>
                 <AppProvider>{children}</AppProvider>
             </body>
         </html>
