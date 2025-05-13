@@ -15,7 +15,11 @@ const AppProvider = ({ children }: { children: ReactNode }) => {
                 <NextIntlClientProvider>
                     <Header />
                     {children}
-                    <NextTopLoader color='#fff' height={2} />
+                    <NextTopLoader
+                        color='oklch(55.4% .046 257.417)
+'
+                        height={2}
+                    />
                 </NextIntlClientProvider>
             </ThemeProvider>
         </>

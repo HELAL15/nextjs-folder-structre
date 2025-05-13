@@ -3,6 +3,11 @@ import Link from 'next/link';
 import LanguageSwitcher from '@/components/common/LanguageSwitcher';
 import ThemeSwitch from '@/components/common/ThemeSwitch';
 
+import { Button } from '../ui/Button';
+import NavLink from '../ui/NavLink';
+import { Sheet, SheetContent, SheetFooter, SheetHeader, SheetTitle, SheetTrigger } from '../ui/sheet';
+import { FaBars } from 'react-icons/fa6';
+
 const Header = () => {
     const listLinks = [
         { id: 1, title: 'Home', href: '/' },
@@ -14,7 +19,7 @@ const Header = () => {
     const links = listLinks.map((link) => {
         return (
             <li key={link.id}>
-                <Link href={link.href}>{link.title}</Link>
+                <NavLink href={link.href} title={link.title} />
             </li>
         );
     });
@@ -23,14 +28,39 @@ const Header = () => {
         <header className='bg-background text-foreground sticky top-0 z-50 py-4 antialiased'>
             <div className='container flex w-full items-center justify-between gap-6'>
                 <Link href={'/'} className='text-xl md:text-2xl lg:text-3xl'>
-                    nextjs folder-structure
+                    HELAL
                 </Link>
-                <nav>
+                <nav className='hidden lg:flex'>
                     <ul className='flex items-center gap-4'>{links}</ul>
                 </nav>
-                <div className='-items-center flex gap-6'>
-                    <ThemeSwitch />
+                <div className='flex items-center gap-6'>
                     <LanguageSwitcher />
+                    <div className='flex lg:hidden'>
+                        <Sheet>
+                            <SheetTrigger asChild>
+                                <Button className='!bg-transparent !px-0' variant={'ghost'}>
+                                    <i className='cursor-pointer text-xl'>
+                                        <FaBars />
+                                    </i>
+                                </Button>
+                            </SheetTrigger>
+                            <SheetContent>
+                                <SheetHeader>
+                                    <SheetTitle>nextjs folder-structure</SheetTitle>
+                                </SheetHeader>
+
+                                <SheetFooter>
+                                    <div className='flex items-center justify-center gap-2'>
+                                        <ThemeSwitch />
+                                        <LanguageSwitcher />
+                                    </div>
+                                </SheetFooter>
+                            </SheetContent>
+                        </Sheet>
+                    </div>
+                    <div className='hidden lg:flex'>
+                        <ThemeSwitch />
+                    </div>
                 </div>
             </div>
         </header>
