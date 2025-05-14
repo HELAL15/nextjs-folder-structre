@@ -18,7 +18,7 @@ const Header = () => {
                         <NavLinks />
                     </ul>
                 </nav>
-                <div className='flex items-center gap-6'>
+                <div className='flex items-center gap-4 lg:gap-6'>
                     <div className='max-lg:order-2'>
                         <LanguageSwitcher />
                     </div>

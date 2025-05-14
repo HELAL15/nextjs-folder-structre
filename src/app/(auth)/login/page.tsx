@@ -56,10 +56,11 @@ const Page = () => {
     };
 
     return (
-        <section className='h-[89vh]'>
-            <div className='container grid h-full place-items-center'>
+        <section className='my-12 lg:my-20'>
+            <div className='container grid h-full place-items-center space-y-8'>
+                <h1 className='text-center text-3xl font-bold'>login</h1>
                 <Form {...form}>
-                    <form onSubmit={form.handleSubmit(onSubmit)} className='w-full space-y-4 md:w-[400px]'>
+                    <form onSubmit={form.handleSubmit(onSubmit)} className='w-full space-y-6 md:w-[400px]'>
                         <FormField
                             control={form.control}
                             name='email'
