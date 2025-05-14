@@ -1,5 +1,5 @@
 // lib/axiosClient.ts
-import { BASE_URL,LANG } from '@/constants';
+import { BASE_URL } from '@/constants';
 import axios from 'axios';
 import Cookies from 'js-cookie';
 
@@ -9,8 +9,8 @@ const axiosClient = axios.create({
   headers: {
     'Content-Type': 'application/json',
     Accept: 'application/json',
-    'Accept-Language': LANG,
-    Lang: LANG,
+    // 'Accept-Language': LANG,
+    // Lang: LANG,
   },
 });
 

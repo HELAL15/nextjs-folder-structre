@@ -15,7 +15,7 @@ const NavLink = ({ href, title }: IProps) => {
     const isActive = pathname === href;
 
     return (
-        <Link href={href} title={title} className={cn(isActive ? 'text-slate-500' : '')}>
+        <Link href={href} title={title} className={cn(isActive ? 'text-slate-400' : '')}>
             {title}
         </Link>
     );

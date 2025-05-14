@@ -1,9 +1,36 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
+
 @custom-variant dark (&:is(.dark *));
+
 @utility container {
-    padding-inline: 10px;
+    width: 100%;
+    padding-inline: 1rem;
     margin-inline: auto;
+    @variant sm {
+        max-width: 100%;
+        padding-inline: 1rem;
+    }
+
+    @variant md {
+        max-width: 100%;
+        padding-inline: 2rem;
+    }
+
+    @variant lg {
+        max-width: 100%;
+        padding-inline: 3rem;
+    }
+
+    @variant xl {
+        max-width: 100%;
+        padding-inline: 4rem;
+    }
+
+    @variant 2xl {
+        max-width: 100%;
+        padding-inline: 5rem;
+    }
 }
 
 @theme inline {
@@ -120,7 +147,10 @@
     body {
         @apply bg-background text-foreground;
     }
+    section {
+        @apply py-6;
+    }
 }
 #nprogress {
-    z-index: 999999999999 !important;
+    z-index: 9999999999 !important;
 }

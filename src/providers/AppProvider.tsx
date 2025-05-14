@@ -3,6 +3,7 @@ import React, { ReactNode } from 'react';
 import { ThemeProvider } from 'next-themes';
 
 import '@/app/globals.css';
+import Footer from '@/components/layout/Footer';
 import Header from '@/components/layout/Header';
 
 import { NextIntlClientProvider } from 'next-intl';
@@ -15,8 +16,9 @@ const AppProvider = ({ children }: { children: ReactNode }) => {
                 <NextIntlClientProvider>
                     <Header />
                     {children}
+                    <Footer />
                     <NextTopLoader
-                        color='oklch(55.4% .046 257.417)
+                        color='oklch(55.4% .046 251.412)
 '
                         height={2}
                     />
