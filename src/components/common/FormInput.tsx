@@ -1,8 +1,9 @@
 import { FormControl, FormField, FormItem, FormLabel, FormMessage } from '../ui/form';
 import { Input } from '../ui/input';
+import type { Control } from 'react-hook-form';
 
 interface IProps {
-    control: undefined;
+    control: Control;
     name: string;
     label?: string;
     placeholder?: string;

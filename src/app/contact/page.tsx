@@ -6,30 +6,28 @@ import FormInput from '@/components/common/FormInput';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { Form } from '@/components/ui/form';
+import formSchema from '@/validations/contactSchema';
 import { zodResolver } from '@hookform/resolvers/zod';
 
 import { useForm } from 'react-hook-form';
+import type { FieldValues } from 'react-hook-form';
 import { FaDiscord, FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa6';
-import * as z from 'zod';
 
-const formSchema = z.object({
-    email: z.string().email({ message: 'Invalid email address' }),
-    name: z.string().min(1, { message: 'Name is required' }),
-    message: z.string().min(1, { message: 'Name is required' })
-});
+const formObject: FieldValues = {
+    resolver: zodResolver(formSchema),
+    mode: 'onChange',
+    defaultValues: {
+        email: '',
+        name: '',
+        message: ''
+    }
+};
+
 const page = () => {
-    const form = useForm({
-        resolver: zodResolver(formSchema),
-        mode: 'onChange',
-        defaultValues: {
-            email: '',
-            name: '',
-            message: ''
-        }
-    });
+    const form = useForm<FieldValues>(formObject);
     const { formState, control, handleSubmit } = form;
 
-    const onSubmit = (data: z.infer<typeof formSchema>) => {
+    const onSubmit = (data: FieldValues) => {
         console.log(data);
     };
 
