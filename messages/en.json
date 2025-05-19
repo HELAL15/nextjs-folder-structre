@@ -1,3 +1,10 @@
 {
-  "hello": "hello world"
+  "hello": "hello world",
+  "nav":{
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "login": "Login",
+    "register": "Register"
+  }
 }

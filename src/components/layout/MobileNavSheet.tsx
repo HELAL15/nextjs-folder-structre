@@ -7,7 +7,7 @@ import NavLinks from '../common/NavLinks';
 import ThemeSwitch from '../common/ThemeSwitch';
 import { Button } from '../ui/Button';
 import { Sheet, SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetTitle, SheetTrigger } from '../ui/sheet';
-import { FaBars } from 'react-icons/fa6';
+import { HiBars2 } from 'react-icons/hi2';
 
 const MobileNavSheet = () => {
     const { isOpen, setIsOpen } = useRouteChange();
@@ -17,8 +17,8 @@ const MobileNavSheet = () => {
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
                 <SheetTrigger asChild>
                     <Button className='!bg-transparent !px-0' variant={'ghost'}>
-                        <i className='cursor-pointer text-xl'>
-                            <FaBars />
+                        <i className='cursor-pointer'>
+                            <HiBars2 className='size-[unset] text-4xl' />
                         </i>
                     </Button>
                 </SheetTrigger>

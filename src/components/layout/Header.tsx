@@ -22,7 +22,7 @@ const Header = () => {
                     <div className='max-lg:order-2'>
                         <LanguageSwitcher />
                     </div>
-                    <Button className='px-8 max-lg:order-1'>
+                    <Button className='px-8 max-lg:order-1 max-lg:hidden'>
                         <Link href={'/login'}>login</Link>
                     </Button>
                     <nav className='order-3 flex lg:hidden'>
