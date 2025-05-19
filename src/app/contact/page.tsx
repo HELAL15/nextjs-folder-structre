@@ -13,17 +13,16 @@ import { useForm } from 'react-hook-form';
 import type { FieldValues } from 'react-hook-form';
 import { FaDiscord, FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa6';
 
-const formObject: FieldValues = {
-    resolver: zodResolver(formSchema),
-    mode: 'onChange',
-    defaultValues: {
-        email: '',
-        name: '',
-        message: ''
-    }
-};
-
 const page = () => {
+    const formObject: FieldValues = {
+        resolver: zodResolver(formSchema),
+        mode: 'onChange',
+        defaultValues: {
+            email: '',
+            name: '',
+            message: ''
+        }
+    };
     const form = useForm<FieldValues>(formObject);
     const { formState, control, handleSubmit } = form;
 

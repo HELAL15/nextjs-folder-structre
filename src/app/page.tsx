@@ -1,3 +1,5 @@
+import { Metadata } from 'next';
+
 import HomePage from '@/app/(delete-this-and-modify-page.tsx)/HomePage';
 
 /**
@@ -5,6 +7,11 @@ import HomePage from '@/app/(delete-this-and-modify-page.tsx)/HomePage';
  *
  * @returns {JSX.Element} The rendered HomePage component.
  */
+
+export const metadata: Metadata = {
+    title: 'home - websiteName'
+};
+
 const Page = () => {
     return (
         <>
