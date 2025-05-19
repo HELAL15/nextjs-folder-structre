@@ -59,7 +59,13 @@ const LoginForm = () => {
                 <form onSubmit={handleSubmit(onSubmit)} className='w-full space-y-6 md:w-[400px]'>
                     <FormInput name='email' placeholder='a**@gmail.com' label='email' control={control} />
 
-                    <FormInput name='password' placeholder='********' label='password' control={control} />
+                    <FormInput
+                        type='password'
+                        name='password'
+                        placeholder='********'
+                        label='password'
+                        control={control}
+                    />
 
                     <Button type='submit'>{formState.isSubmitting ? 'loading' : 'login'}</Button>
                 </form>
