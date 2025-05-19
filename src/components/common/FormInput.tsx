@@ -21,7 +21,7 @@ const FormInput = ({ control, name, placeholder, label, type }: IProps) => {
                     <FormItem>
                         {label && <FormLabel>{label}</FormLabel>}
                         <FormControl>
-                            <Input type={type} placeholder={placeholder} {...field} />
+                            <Input className='!py-5' type={type} placeholder={placeholder} {...field} />
                         </FormControl>
                         <FormMessage />
                     </FormItem>

@@ -28,7 +28,7 @@ function useCookie(key: string, initialValue: string | undefined) {
     setCookieValue(undefined);
   };
 
-  return [cookieValue, setCookie, removeCookie];
+  return {cookieValue, setCookie, removeCookie};
 }
 
 export default useCookie;
