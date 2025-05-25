@@ -3,6 +3,7 @@ import type { ReactNode } from 'react';
 import type { Metadata } from 'next';
 
 import AppProvider from '@/providers/AppProvider';
+import { Analytics } from '@vercel/analytics/next';
 
 import { getLocale } from 'next-intl/server';
 
@@ -19,7 +20,10 @@ const Layout = async ({ children }: Readonly<{ children: ReactNode }>) => {
     return (
         <html suppressHydrationWarning lang={locale} dir={dir}>
             <body className={`bg-background text-foreground relative overflow-x-clip antialiased`}>
-                <AppProvider>{children}</AppProvider>
+                <AppProvider>
+                    {children}
+                    <Analytics />
+                </AppProvider>
             </body>
         </html>
     );
