@@ -25,7 +25,7 @@ const LangSwitcher = () => {
 
     return (
         <>
-            <Button className='!bg-transparent !px-0' variant={'ghost'} onClick={() => setLocale(localeSetter)}>
+            <Button className='h-6 !bg-transparent !px-0' variant={'ghost'} onClick={() => setLocale(localeSetter)}>
                 <i>
                     <AiOutlineGlobal />
                 </i>
